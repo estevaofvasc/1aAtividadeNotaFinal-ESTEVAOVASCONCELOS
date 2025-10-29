@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Questão 2 - Soma</title>
+        <meta charset="UTF-8">
+        <style>
+            body{
+                background-color: aquamarine;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Soma de dois números!</h1>
+        <input type="number" id="numero1" placeholder="Insira o primeiro valor:"><br><br>
+        <input type="number" id="numero2" placeholder="Insira o segundo número:"><br><br>
+        <button type="submit" onclick="soma()">Enviar</button>
+        <p id="resposta"></p>
+
+        <script>
+            function soma(){
+                const numero1 = Number(document.getElementById("numero1").value);
+                const numero2 = Number(document.getElementById("numero2").value);
+                const resposta = document.getElementById("resposta");
+                const soma = numero1 + numero2;
+                resposta.textContent = `${soma}`;
+
+            }
+        </script>
+    </body>
+</html>
