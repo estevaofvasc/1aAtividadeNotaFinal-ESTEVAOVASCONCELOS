@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Questão 1 - Página Pessoal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="'width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: rgb(34, 68, 57);
+                text-align: center;
+            }
+
+            div {
+                background-color: rgb(224, 224, 228);
+                max-width: 800px;
+                color:black;
+                margin: 50px auto;
+                border-radius: 10px;
+                text-align: center;
+            }
+
+            h1 {
+                font-family: 'Courier New', Courier, monospace;
+            }
+
+            h2 {
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 130%;
+            }
+
+            p {
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+
+            .padding {
+               padding: 10px; 
+            }
+
+            #minhaimagem {
+                border-radius: 50%;
+                border: 6px solid rgb(0, 0, 0);
+                padding-bottom: auto;
+            }
+
+            .languages {
+                margin: auto;
+            }
+
+            .Socials {
+                margin: auto;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="padding">
+            <div class="imagem">
+                <img id="minhaimagem" src="https://media.licdn.com/dms/image/v2/D4D03AQHqUytWVeNwyQ/profile-displayphoto-shrink_800_800/B4DZYiBWUBGwAc-/0/1744327502141?e=1762992000&v=beta&t=V9UZ-jkObHSCGomR-3yC2OGtuPlD0oGsPxjTtqZfmgY" alt="Minha foto" width="250">
+            </div>
+       
+        <h1>Estevão Ferreira de Vasconcelos</h1>
+        <h2>Estudante de Análise e Desenvolvimento de Sistemas</h2>
+        <h2>Número da matrícula: 2025 0291 8003</h2>
+        <p>
+            Sou estudante de Análise de Sistemas da Computação pela UNESA, apaixonado por tecnologia, inovação e soluções inteligentes. Tenho foco em desenvolvimento de software, inteligência artificial e computação em nuvem.
+            Estou em busca de oportunidades para aplicar meus conhecimentos em ambientes colaborativos e desafiadores e possuo inglês avançado.
+        </p>
+        <h2>Estou estudando:</h2>
+
+        <div class="languages">
+            <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+            <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+            <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
+            <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+            <img src="https://img.shields.io/badge/SQL-003B57?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/SAP-Logo.svg" alt="SAP" width="55">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="SALESFORCE" width="40">
+        </div>
+        
+        <h2>
+            Me encontre no:
+        </h2>
+        <div class="Socials">
+            <a href="https://www.linkedin.com/in/estev%C3%A3o-vasconcelos-288390339/">
+                <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=LinkedIn&logoColor=white" alt="LINKEDIN">
+            </a>
+            <a href="https://github.com/estevaofvasc">
+                <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=whit" alt="GITHUB">
+            </a>    
+            <a href="mailto:estevaofvasc@gmail.com">
+                <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=Gmail&logoColor=white" alt="EMAIL">
+            </a>
+        </div>
+        </div>
+    </body>
+</html>
