@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Questão 3 - Troca de cor</title>
+        <style>
+            body {
+                background-color: black;
+                text-align: center;
+            }
+            h1 {
+                color: white;
+            }
+            button {
+                color: rgb(184, 0, 0);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Troque a cor da página!</h1>
+        <button type="submit" onclick="mudarcor()" ">Hora de trocar!</button>
+
+        <script>
+            function mudarcor(){
+                const cores = ['#2a0000', '#182c25', '#554616', '#010048', '#AA336A'];
+                const aleatorio = Math.floor(Math.random() * cores.length);
+                const corescolhida = cores[aleatorio];
+                document.body.style.backgroundColor = corescolhida;
+            }
+        </script>
+    </body>
+</html>
