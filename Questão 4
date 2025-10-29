@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <title>Questão 4 - Calculadora de IMC</title>
+        <style>
+            body {
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                background: linear-gradient(135deg,#60d1f3fd, #75eba6);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 24px;
+            }   
+            
+            .card {
+                background: white;
+                width: 360px;
+                border-radius: 12px;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 20px;
+                margin-bottom: 12px;
+                text-align: center;
+            }
+
+            form .row {
+                margin-bottom: 12px;
+            }
+
+            label {
+                display: block;
+                font-size: 13px;
+                margin-bottom: 6px;
+            }
+            
+            .buttons {
+                display: flex;
+                gap: 8px;
+                margin-top: 6px;
+            }
+
+            button {
+                flex: 1;
+                padding: 10px 12px;
+                border-radius: 10px;
+                font-size: 15px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <h1>Calculadora de IMC</h1>
+            <form id="form">
+                <div class="row">       
+                    <label for="peso">Peso (kg)</label>
+                    <input id="peso" type="number" placeholder="ex:70">
+                </div>
+                <div class="row">
+                    <label for="altura">Altura (m)</label>
+                    <input id="altura" type="number" placeholder="ex: 1.75">
+                </div>
+
+                <div class="buttons">
+                    <button id="calcularBtn" class="btn-calc" type="button">Calcular IMC</button>
+                    <button id="resetBtn" class="btn-reset" type="reset">Limpar</button>
+                </div>
+            </form>
+
+
+
+        <div id="saida" class="result">Seu IMC:</div>
+        <div id="categoria" class="small"></div>
+        </div>
+
+        <script>
+            const pesoinput = document.getElementById('peso');
+            const alturainput = document.getElementById('altura');
+            const calcularBtn = document.getElementById('calcularBtn');
+            const saida = document.getElementById('saida');
+            const categoria = document.getElementById('categoria');
+
+            function calcularIMC(peso, altura) {
+                if (altura <= 0) return NaN;
+                const imc = peso / (altura * altura);
+                return Math.round(imc * 100) / 100;
+            }
+            
+            function classificarIMC(imc){
+                if (isNaN(imc)) return "";
+                if (imc < 18.5) return 'Abaixo do peso';
+                if (imc < 25) return 'Peso Normal';
+                if (imc < 30) return 'Sobrepeso';
+                else return 'Obesidade';
+            }
+
+            calcularBtn.addEventListener('click',() => {
+                const peso = parseFloat(pesoinput.value.replace(',', '.'));
+                const altura = parseFloat(alturainput.value.replace(',', '.'));
+
+                if (!peso || peso <= 0) {
+                    saida.textContent = 'Por favor insira um peso válido (kg)';
+                    categoria.textContent = '';
+                    pesoinput.focus();
+                    return;
+                }
+                
+                if (!altura || altura <= 0) {
+                    saida.textContent = 'Por favor insira uma altura válida (m)';
+                    categoria.textContent = '';
+                    alturainput.focus();
+                    return;
+                }
+
+                const imc = calcularIMC(peso, altura);
+
+                saida.textContent = `Seu IMC: ${imc.toFixed(2)}`;
+                categoria.textContent = `Classificação: ${classificarIMC(imc)}`;
+
+               form.addEventListener('reset', () => {
+                setTimeout(() => {
+                    saida.textContent = 'Seu IMC:';
+                    categoria.textContent = '';
+                 }, 0);
+               });
+
+               form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                calcularBtn.click()
+               });
+            });
+
+        </script> 
+    </body>
+</html>
