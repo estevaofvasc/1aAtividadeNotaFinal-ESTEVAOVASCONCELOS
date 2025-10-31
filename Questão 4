@@ -19,6 +19,7 @@
                 width: 360px;
                 border-radius: 12px;
                 padding: 20px;
+                text-align: center;
             }
 
             h1 {
